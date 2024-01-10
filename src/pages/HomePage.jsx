@@ -168,7 +168,7 @@ export default function HomePage() {
                         </div>
                         {/* Repeat the above structure for other form fields */}
                         <button
-                            type="submit"
+                            // type="submit"
                             className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
                         >
                             Submit
@@ -182,6 +182,36 @@ export default function HomePage() {
                         Schemes
                     </h1>
                 </div>
+            </div>
+            <div className="max-w-md mx-auto mt-8 p-4 mb-8 bg-white shadow-md rounded-md">
+                <h1 className="text-2xl font-bold mb-4">
+                    Subscribe to Our Newsletter
+                </h1>
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-4">
+                        <label
+                            className="block text-sm font-semibold mb-2"
+                            htmlFor="email"
+                        >
+                            Email:
+                            <input
+                                className="w-full border rounded-md px-3 py-2 mt-1"
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </label>
+                    </div>
+                    <button
+                        type="submit"
+                        className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
+                    >
+                        Subscribe
+                    </button>
+                </form>
             </div>
             <Footer />
         </div>
