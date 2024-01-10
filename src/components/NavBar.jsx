@@ -2,7 +2,6 @@ import { useState } from "react";
 import React from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import profile from "../assets/profile.svg";
 
 function NavBar() {
     const [showMenu, setShowMenu] = useState(false);
@@ -46,13 +45,6 @@ function NavBar() {
                         Your Task
                     </button>
                 </Link>
-                <Link to="/profile" className="w-[90px]">
-                    <img
-                        className="w-[40px] cursor-pointer"
-                        src={profile}
-                        alt=""
-                    />
-                </Link>
             </div>
 
             <div className="mt-20 lg:hidden">
@@ -80,36 +72,6 @@ function NavBar() {
                             Jobs
                         </div>
                     </Link>
-                    {isAuthenticated ? (
-                        <div className="">
-                            <Link to="/profile">
-                                <div className="p-2 my-2 rounded-md  w-[100%] flex justify-center items-center hover:bg-customColor">
-                                    Task
-                                </div>
-                            </Link>
-
-                            <Link to="/profile">
-                                <div className="p-2 my-2 rounded-md  w-[100%] flex justify-center items-center hover:bg-customColor">
-                                    Profile
-                                </div>
-                            </Link>
-                        </div>
-                    ) : (
-                        <>
-                            {" "}
-                            <Link to="/register">
-                                <div className="p-2 my-2 rounded-md  w-[100%] flex justify-center items-center hover:bg-customColor">
-                                    Register
-                                </div>
-                            </Link>
-                            <Link to="/login">
-                                {" "}
-                                <div className="p-2 my-2 rounded-md  w-[100%] flex justify-center items-center hover:bg-customColor">
-                                    Login
-                                </div>
-                            </Link>
-                        </>
-                    )}
                 </ul>
             </div>
 
