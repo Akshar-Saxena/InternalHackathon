@@ -10,41 +10,32 @@ function NavBar() {
     };
     return (
         <div className="w-full  flex justify-between px-4 md:px-8 items-center  md:h-20 h-max">
-            <div className="flex justify-between w-1/3 gap-20">
+            <div className="flex justify-between w-full">
                 <Link to="/">
                     <div className="flex text-3xl font-semibold font-inter">
-                        <div className="text-custom-text">WORK</div>
-                        <div className="text-footer-text2">SHALA</div>
+                        <div className="text-[#FFA500]">SCHEME</div>
+                        <div className="text-footer-text2">INSIGHT</div>
                     </div>
                 </Link>
-                <ul className="lg:flex hidden gap-6 text-xl m-2 ">
-                    <Link to="/">
-                        {" "}
-                        <li className="hover:text-custom-text">Home</li>
-                    </Link>
-                    <Link to="/courses">
-                        {" "}
-                        <li className="cursor-pointer hover:text-customColor">
-                            Services
-                        </li>
-                    </Link>
-                    <Link to="/companies">
-                        <li className="hover:text-customColor">Companies</li>
-                    </Link>
-                    <Link to="/jobs">
-                        <li className="hover:text-customColor">Jobs</li>
-                    </Link>
-                </ul>
-            </div>
-            <div className="lg:flex hidden  justify-center place-items-center">
-                <Link to="/profile">
-                    <button
-                        // onClick={() => navigate("/applications")}
-                        className="w-[120px] h-[30px] py-1 outline outline-1 outline-[#946cc5] rounded-lg font-medium hover:bg-[#946cc5] hover:text-white mx-8 text-xs"
-                    >
-                        Your Task
-                    </button>
-                </Link>
+                <div>
+                    <ul className="lg:flex hidden gap-10 text-xl m-2  ">
+                        <Link to="/">
+                            {" "}
+                            <li className="hover:text-custom-text">About</li>
+                        </Link>
+                        <Link to="/courses">
+                            {" "}
+                            <li className="cursor-pointer hover:text-customColor">
+                                Schemes
+                            </li>
+                        </Link>
+                        <Link to="/companies">
+                            <li className="hover:text-customColor">
+                                Get in touch
+                            </li>
+                        </Link>
+                    </ul>
+                </div>
             </div>
 
             <div className="mt-20 lg:hidden">
